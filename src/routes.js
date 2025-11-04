@@ -6,6 +6,7 @@ import uploadConfig from './config/upload.js';
 import SessionController from './controllers/SessionController';
 import HouseController from './controllers/HouseController.js';
 import DashboardController from './controllers/DashboardController.js';
+import ReserveController from './controllers/ReserveController.js';
 
 const routes = new Routes();
 const upload = multer(uploadConfig);
@@ -17,6 +18,10 @@ routes.get('/houses/:house_id', HouseController.show);
 routes.post('/houses', upload.single('thumbnail'), HouseController.store);
 routes.put('/houses/:house_id', upload.single('thumbnail'), HouseController.update);
 routes.delete('/houses', HouseController.destroy);
+
+routes.get('/reserves', ReserveController.index);
+routes.post('/houses/:house_id/reserve', ReserveController.store);
+routes.delete('/reserves/cancel', ReserveController.destroy);
 
 //Novo usuario
 routes.post('/session', SessionController.store);

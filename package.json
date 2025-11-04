@@ -11,9 +11,11 @@
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "mongoose": "^8.19.2",
-    "multer": "^2.0.2"
+    "multer": "^2.0.2",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
+    "eslint": "^9.39.1",
     "nodemon": "^3.1.10",
     "sucrase": "^3.35.0"
   }
