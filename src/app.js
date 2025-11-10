@@ -9,10 +9,10 @@ class App {
     constructor(){
         this.server = express();
 
-        mongoose.connect('mongodb+srv://ferreiracsf_db_user:FymNcemcihsYoS3S@devhouse.4e7culr.mongodb.net/?appName=devhouse',{
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
+            mongoose.connect(process.env.MONGO_URL, {
+                useNewUrlParser: true,
+                useUnifiedTopology: true,
+            });
 
         this.middlewares();
         this.routes();
