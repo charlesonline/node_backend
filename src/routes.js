@@ -11,6 +11,10 @@ import ReserveController from './controllers/ReserveController.js';
 const routes = new Routes();
 const upload = multer(uploadConfig);
 
+routes.get('/', (req, res) => {
+  res.send('Welcome to the House Rental API');
+});
+
 routes.get('/dashboard', DashboardController.show);
 
 routes.get('/houses', HouseController.index);

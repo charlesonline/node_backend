@@ -1,0 +1,24 @@
+services:
+  holses:
+    build: .
+    container_name: holses
+    ports:
+      - "7000:3000"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    dns:
+      - 127.0.0.1
+      - 8.8.8.8
+      - 8.8.4.4
+    extra_hosts:
+      - "node_ws.local:0.0.0.0"
+    networks:
+      - myrede
+    # Removi o comando de reinstalar - deixe o Dockerfile cuidar disso
+    # Se precisar rodar em modo dev, use:
+    # command: yarn dev
+
+networks:
+  myrede:
+    external: false
