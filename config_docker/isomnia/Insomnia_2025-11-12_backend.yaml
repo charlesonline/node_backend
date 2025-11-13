@@ -1,0 +1,507 @@
+type: collection.insomnia.rest/5.0
+name: Node API
+meta:
+  id: wrk_377a36a1c08d41638659c19eff3acafa
+  created: 1762038176925
+  modified: 1762038176925
+  description: ""
+collection:
+  - name: Learn
+    meta:
+      id: fld_62d21e4f055340d2b37ae840f2b4cbc6
+      created: 1762132440705
+      modified: 1762132440705
+      sortKey: -1762132440705
+      description: ""
+  - name: Api MyHouse
+    meta:
+      id: fld_90ef146920f1458cba97d2ab44e27125
+      created: 1762132491285
+      modified: 1762136089004
+      sortKey: -1762132491285
+      description: ""
+    children:
+      - name: Session
+        meta:
+          id: fld_3b60b89ae5544821829bf1609b0d60ef
+          created: 1762136063823
+          modified: 1762136063823
+          sortKey: -1762136063823
+          description: ""
+        children:
+          - url: http://localhost:3333/session
+            name: Criar nova sessao
+            meta:
+              id: req_4234f864c89d4944998e13b3a380a396
+              created: 1762132522170
+              modified: 1762224385441
+              isPrivate: false
+              description: ""
+              sortKey: -1762136067154
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email":"ferreiracsf@gmail.com"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.2.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3333/session
+            name: Criar nova sessao 2
+            meta:
+              id: req_8b896455bfaa4bc296d267e6c5b070da
+              created: 1762224150522
+              modified: 1762224150522
+              isPrivate: false
+              description: ""
+              sortKey: -1762134258398
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email":"a@a.com"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.2.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: House
+        meta:
+          id: fld_82c778c702bb4cf9a2a952b5dfca8b2f
+          created: 1762136095765
+          modified: 1762136095765
+          sortKey: -1762136095765
+          description: ""
+        children:
+          - url: http://localhost:3333/houses
+            name: Criar nova casa
+            meta:
+              id: req_8954a3ee36414631b2baf89756a64ea6
+              created: 1762136084158
+              modified: 1762224525317
+              isPrivate: false
+              description: ""
+              sortKey: -1762136099436
+            method: POST
+            body:
+              mimeType: multipart/form-data
+              params:
+                - id: pair_5b9e37b2fd844964a724447226f5f558
+                  name: thumbnail
+                  value: ""
+                  description: ""
+                  disabled: false
+                  type: file
+                  fileName: /Users/charlesonline/Downloads/imagem de capa 2.png
+                - id: pair_6d4a7224110044fea0305f84c9944805
+                  name: description
+                  value: CASA DA PRAIA
+                  description: ""
+                  disabled: false
+                - id: pair_0feba7a8e47e41c6905ef59bbbc82876
+                  name: price
+                  value: "200"
+                  description: ""
+                  disabled: false
+                - id: pair_d08b5bbd308d4ed8a6d57a9785b8acdb
+                  name: location
+                  value: RUA CINCO
+                  description: ""
+                  disabled: false
+                - id: pair_3c7f784911234c42bf2962fdfcd90478
+                  name: status
+                  value: "true"
+                  description: ""
+                  disabled: false
+            headers:
+              - name: Content-Type
+                value: multipart/form-data
+                id: pair_5e895d12877b41c8b825e39edfaa5f08
+              - name: User-Agent
+                value: insomnia/11.2.0
+                id: pair_526d4cda08e84397855e2e5322d87a28
+              - id: pair_f896e324180841bf946a5f34c66d766d
+                name: user_id
+                value: 6908ceadb5b9feda84dcbe5d
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3333/houses
+            name: Listar todas as casas (ativo)
+            meta:
+              id: req_0906408af54c4224a99689c6641e65df
+              created: 1762180277909
+              modified: 1762184645980
+              isPrivate: false
+              description: ""
+              sortKey: -1762180277909
+            method: GET
+            parameters:
+              - id: pair_2f5ccf92a468428383fef441aee06242
+                name: status
+                value: "true"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+                id: pair_07a6467191844fd2a55c9ec19c84d22b
+              - id: pair_c1bd83d2daca4c2389d1fe3e6b59c9a0
+                name: user_id
+                value: 6908055647915a0e092b7237
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3333/houses/690817b9c334f6972bf06361
+            name: Editar uma casa
+            meta:
+              id: req_6a6a0dbc6eb24b139b8e2a00fb82a4f4
+              created: 1762180836121
+              modified: 1762183895308
+              isPrivate: false
+              description: ""
+              sortKey: -1762136095400.75
+            method: PUT
+            body:
+              mimeType: multipart/form-data
+              params:
+                - id: pair_5b9e37b2fd844964a724447226f5f558
+                  name: thumbnail
+                  value: ""
+                  description: ""
+                  disabled: false
+                  type: file
+                  fileName: /Users/charlesonline/Downloads/pense_poker_logo.png
+                - id: pair_6d4a7224110044fea0305f84c9944805
+                  name: description
+                  value: Casa favorita 1
+                  description: ""
+                  disabled: false
+                - id: pair_0feba7a8e47e41c6905ef59bbbc82876
+                  name: price
+                  value: "1800"
+                  description: ""
+                  disabled: false
+                - id: pair_d08b5bbd308d4ed8a6d57a9785b8acdb
+                  name: location
+                  value: Via alemanha, 1101
+                  description: ""
+                  disabled: false
+                - id: pair_3c7f784911234c42bf2962fdfcd90478
+                  name: status
+                  value: "true"
+                  description: ""
+                  disabled: false
+            headers:
+              - name: Content-Type
+                value: multipart/form-data
+                id: pair_5e895d12877b41c8b825e39edfaa5f08
+              - name: User-Agent
+                value: insomnia/11.2.0
+                id: pair_526d4cda08e84397855e2e5322d87a28
+              - id: pair_f896e324180841bf946a5f34c66d766d
+                name: user_id
+                value: 6908055647915a0e092b7237
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3333/houses/690817b9c334f6972bf06361
+            name: Listar uma casa
+            meta:
+              id: req_af9653fe30f347289e245de2dd394fd7
+              created: 1762181253895
+              modified: 1762181264792
+              isPrivate: false
+              description: ""
+              sortKey: -1762158188672.5
+            method: GET
+            parameters:
+              - id: pair_06072d65a4f8445793d42fb0f6ccec9d
+                name: ""
+                value: ""
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+                id: pair_07a6467191844fd2a55c9ec19c84d22b
+              - id: pair_c1bd83d2daca4c2389d1fe3e6b59c9a0
+                name: user_id
+                value: 6908055647915a0e092b7237
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3333/houses
+            name: Deleta uma casa
+            meta:
+              id: req_45f060686fd24e68b8f2b7d590194894
+              created: 1762183875105
+              modified: 1762184902948
+              isPrivate: false
+              description: ""
+              sortKey: -1762136091365.5
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"house_id": "6908198cf310cc8645721eb5"
+                }
+            parameters:
+              - id: pair_06072d65a4f8445793d42fb0f6ccec9d
+                name: ""
+                value: ""
+                description: ""
+                disabled: false
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_83ed1fd4a7ec41e7b39d1c6ff5e6eaa2
+              - name: User-Agent
+                value: insomnia/12.0.0
+                id: pair_07a6467191844fd2a55c9ec19c84d22b
+              - id: pair_c1bd83d2daca4c2389d1fe3e6b59c9a0
+                name: user_id
+                value: 6908ceadb5b9feda84dcbe5d
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Dashboard
+        meta:
+          id: fld_030868566c054e5c9d97e1de462b2936
+          created: 1762185661850
+          modified: 1762185661850
+          sortKey: -1762185661850
+          description: ""
+        children:
+          - url: http://localhost:8050/dashboard
+            name: show
+            meta:
+              id: req_a98c17e76b924433a580cf363673fdf8
+              created: 1762185667067
+              modified: 1762740374140
+              isPrivate: false
+              description: ""
+              sortKey: -1762185667067
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+                id: pair_cf06675c811a4f3e94e5564e02b71e25
+              - id: pair_555981e151a343aebf280c34739e2d28
+                name: user_id
+                value: 6908055647915a0e092b7237
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Reserve
+        meta:
+          id: fld_d2b3d30fd74c49efa8bd51fe38f704c4
+          created: 1762222938560
+          modified: 1762222938560
+          sortKey: -1762222938560
+          description: ""
+        children:
+          - url: http://localhost:3333/houses/69096950b2016fbfb44ccf07/reserve
+            name: Store
+            meta:
+              id: req_fb3d9d595aae4f18a53cc831699f9602
+              created: 1762222944537
+              modified: 1762225327857
+              isPrivate: false
+              description: ""
+              sortKey: -1762222944537
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"date": "25 de Novembro"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.0.0
+                id: pair_3aea7be21de444619bb09b4447572ea6
+              - id: pair_b84c88e0fb65412c9dba83504a0b47fd
+                name: user_id
+                value: 6908055647915a0e092b7237
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3333/reserves
+            name: Index
+            meta:
+              id: req_18c22247bba643ffb1434fb52a9cb086
+              created: 1762226381273
+              modified: 1762226402669
+              isPrivate: false
+              description: ""
+              sortKey: -1762204305802
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+                id: pair_3aea7be21de444619bb09b4447572ea6
+              - id: pair_b84c88e0fb65412c9dba83504a0b47fd
+                name: user_id
+                value: 6908055647915a0e092b7237
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3333/reserves/cancel
+            name: Delete
+            meta:
+              id: req_02a051ebbdf54a46b1c19dd38271c0ab
+              created: 1762226929767
+              modified: 1762227405766
+              isPrivate: false
+              description: ""
+              sortKey: -1762194986434.5
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"reserve_id": "690969cbb2016fbfb44ccf0c"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.0.0
+                id: pair_3aea7be21de444619bb09b4447572ea6
+              - id: pair_b84c88e0fb65412c9dba83504a0b47fd
+                name: user_id
+                value: 6908055647915a0e092b7237
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+  - name: Tasklist
+    meta:
+      id: fld_06fed8f3c31845149fd45c44c7ad1557
+      created: 1762309591966
+      modified: 1762309591966
+      sortKey: -1762309591966
+      description: ""
+    children:
+      - name: Users
+        meta:
+          id: fld_a4bfdeb86db341659b12472ac4de60af
+          created: 1762826840012
+          modified: 1762826840012
+          sortKey: -1762826840012
+          description: ""
+      - name: Session
+        meta:
+          id: fld_5e1b02722c734b2989bdbe9e8c198598
+          created: 1762828603866
+          modified: 1762828603866
+          sortKey: -1762828603866
+          description: ""
+      - name: Tasks
+        meta:
+          id: fld_5f7f7199ce944f7c98cb83f5979211f3
+          created: 1762918980857
+          modified: 1762918984589
+          sortKey: -1762828603916
+          description: ""
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_acb508a78a407a839730a352ba80b965b4fc2e99
+    created: 1762038176933
+    modified: 1762038176933
+environments:
+  name: Base Environment
+  meta:
+    id: env_acb508a78a407a839730a352ba80b965b4fc2e99
+    created: 1762038176929
+    modified: 1762038176929
+    isPrivate: false
